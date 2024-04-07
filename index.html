@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon Montezuma's GitHub Pages</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for movie posters */
+        #movies {
+            margin-top: 50px;
+        }
+        #movies h2 {
+            color: #fff;
+            font-size: 24px;
+        }
+        .movie-poster {
+            margin-bottom: 20px;
+        }
+        .movie-poster img {
+            width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,9 +35,11 @@
             <h2>Videos</h2>
             <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/qw2LU1yS7aw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <!-- Add the second video here -->
+            <div class="video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/FOWf8uqGf8A" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-            <!-- You can add more video placeholders here if needed -->
         </section>
 
         <section id="spotify">
@@ -29,6 +50,21 @@
                 <iframe src="https://open.spotify.com/embed/playlist/your-playlist-id" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </section>
+
+        <!-- New section for favorite movies -->
+        <section id="movies">
+            <h2>Favorite Movies</h2>
+            <div class="movie-poster">
+                <img src="https://img.moviepostershop.com/brainscan-movie-poster-1994-1020203479.jpg" alt="Brainscan">
+            </div>
+            <div class="movie-poster">
+                <img src="https://www.themoviedb.org/t/p/original/ecuP4ZaIHawKmmIaXD5mS55UlhL.jpg" alt="Inception">
+            </div>
+            <div class="movie-poster">
+                <img src="https://www.blackgate.com/wp-content/uploads/2013/10/conan-the-barbarian-poster2.jpg" alt="Conan the Barbarian">
+            </div>
+            <!-- Add more movie posters here if needed -->
+        </section>
     </main>
 
     <footer>
@@ -38,4 +74,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
