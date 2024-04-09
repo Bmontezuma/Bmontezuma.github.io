@@ -1,0 +1,15 @@
+# Configuration file for your GitHub Pages site
+
+# Site settings
+title: School Notes
+description: A collection of notes for various subjects
+baseurl: "/school-notes" # The subpath of your site, if you're hosting it on a subpath (optional)
+
+# Theme settings (if using a Jekyll theme)
+theme: jekyll-theme-minimal # Change this to the name of the theme you want to use (optional)
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
