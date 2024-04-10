@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><strong>Arrays</strong></h1>
+
+    <p>An <em>array</em> is a data structure used in C# to <em>store a sequential collection of elements</em>. Its size is <em>immutable</em> (<em>cannot be changed after creation</em>). The elements of an array are all of the same type.</p>
+
+    <h2><strong>Syntax</strong></h2>
+
+    <p>There are several ways to create an <em>array</em> in C#:</p>
+
+    <pre><code>// Create a variable of type "type[]" without initializing it:
+type[] arrayName;
+
+// Create the array variable and initialize it with an array of N items:
+type[] arrayName = new type[N];
+
+// Create the array variable and initialize it by specifying the contents:
+type[] arrayName = new type[] { value1, value2, value3, ... valueN };
+
+// Alternative way of creating the array and specifying the contents:
+type[] arrayName = { value1, value2, value3, ... valueN };
+</code></pre>
+
+    <p><em>Note</em>: <em>Arrays</em> in C# have a <em>fixed size</em>, meaning the number of elements they hold cannot be changed once the array has been created.</p>
+
+    <h2><strong>Example</strong></h2>
+
+    <p>Each element in an <em>array</em> is assigned a specific index starting at zero. To access or modify an element in the array, you refer to it by its index and operate on it accordingly.</p>
+
+    <pre><code>using System;
+
+public class Example
+{
+  public static void Main(string[] args)
+  {
+    char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+    //      indexes:  0    1    2    3    4
+
+    Console.WriteLine(vowels[0]); // Output: a
+
+    vowels[0] = 'r';
+
+    Console.WriteLine(vowels[0]); // Output: r
+  }
+}
+</code></pre>
+
+    <p>In the example above, an <em>array</em> of chars was initialized with all the vowels. The first element in the array at index 0 was printed. Then, the element at index 0 was modified by assigning it a new value of 'r'. Then, the value at index 0 was printed again.</p>
+
+    <p>These examples demonstrate how <em>arrays</em> can be used to store various types of data commonly encountered in <em>AR/VR development</em>, such as <em>coordinates</em>, <em>colors</em>, and <em>GameObjects</em>.</p>
+
+    <h2><strong>Storing Coordinates</strong></h2>
+
+    <pre><code>Vector3[] points = new Vector3[4];
+points[0] = new Vector3(0, 0, 0);
+points[1] = new Vector3(1, 0, 0);
+points[2] = new Vector3(1, 1, 0);
+points[3] = new Vector3(0, 1, 0);
+</code></pre>
+
+    <h2><strong>Storing Colors</strong></h2>
+
+    <pre><code>Color[] colors = { Color.red, Color.green, Color.blue };
+</code></pre>
+
+    <h2><strong>Storing GameObjects</strong></h2>
+
+    <pre><code>GameObject[] gameObjects = new GameObject[3];
+gameObjects[0] = Instantiate(prefab1, position, rotation);
+gameObjects[1] = Instantiate(prefab2, position, rotation);
+gameObjects[2] = Instantiate(prefab3, position, rotation);
+</code></pre>
+
+    <h2><strong>Storing positions of objects in a 3D environment</strong></h2>
+
+    <pre><code>public class ObjectManager : MonoBehaviour
+{
+    public Transform[] objectTransforms;
+
+    void Start()
+    {
+        // Accessing objects' positions from the array
+        foreach(Transform objTransform in objectTransforms)
+        {
+            Debug.Log("Object position: " + objTransform.position);
+        }
+    }
+}
+</code></pre>
+
+    <h2><strong>Managing player inventory</strong></h2>
+
+    <pre><code>public class PlayerInventory : MonoBehaviour
+{
+    public string[] inventoryItems;
+
+    void Update()
+    {
+        // Checking if an item is present in the inventory
+        if (Array.Exists(inventoryItems, item => item == "Sword"))
+        {
+            // Player has a sword
+        }
+    }
+}
+</code></pre>
+
+    <h2><strong>Handling input from controllers</strong></h2>
+
+    <pre><code>public class PlayerController : MonoBehaviour
+{
+    public GameObject[] controllerModels;
+
+    void Update()
+    {
+        // Checking input from multiple controllers
+        foreach(GameObject controller in controllerModels)
+        {
+            if(controller.GetComponent<ControllerInput>().GetButton("Fire1"))
+            {
+                // Perform action
+            }
+        }
+    }
+}
+</code></pre>
+
+    <h2><strong>Array Methods</strong></h2>
+
+    <p>Arrays in C# are objects, not just contiguous blocks of memory as in C and C++. Array is the base type of all arrays, and any array can use the properties and methods of the Array object, a few of which are listed below:</p>
+
+    <p><strong>.Clear()</strong><br>
+    Clears the contents of an array, returning each element to its default value.
+    </p>
+    <pre><code>int[] numbers = { 1, 2, 3, 4, 5 };
+Array.Clear(numbers, 0, numbers.Length);
+// Now 'numbers' array will contain all zeros: [0, 0, 0, 0, 0]
+</code></pre>
+
+    <!-- Other array methods go here -->
+
+</body>
+</html>
+
+// 'numbers' array will be sorted in ascending order: [1, 2, 3, 4, 5]
+```
