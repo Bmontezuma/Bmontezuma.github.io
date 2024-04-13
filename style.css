@@ -33,3 +33,12 @@ nav ul li a:hover {
     color: #666;
 }
 
+/* Styles for profile photo */
+.profile-photo {
+    width: 60px; /* Adjust the size of the photo as needed */
+    height: 60px;
+    border-radius: 50%; /* Makes the image circular */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
