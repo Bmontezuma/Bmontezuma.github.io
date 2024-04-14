@@ -34,8 +34,7 @@ nav ul li a:hover {
 
 /* Styles for profile photo */
 .profile-photo {
-    width: 60px; /* Adjust the size of the photo as needed */
-    height: 60px;
+    /* Width and height are already defined inline in the HTML, so we won't change them here */
     border-radius: 50%; /* Makes the image circular */
     position: absolute;
     top: 20px;
