@@ -2,9 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://cdn.wallpapersafari.com/44/93/QRMAhE.jpg');
-    background-size: cover; /* Cover the entire background */
-    background-repeat: no-repeat; /* Do not repeat the background image */
 }
 
 header, nav, main, footer {
