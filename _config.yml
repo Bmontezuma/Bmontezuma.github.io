@@ -5,13 +5,12 @@ title: School Notes
 description: A collection of notes for various subjects
 baseurl: "/school-notes" # The subpath of your site, if you're hosting it on a subpath (optional)
 
-# Theme settings (if using a Jekyll theme)
-theme: remote_theme: pages-themes/midnight@v0.2.0
+# Theme settings (using a remote Jekyll theme)
+remote_theme: pages-themes/midnight@v0.2.0
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme # Make sure this plugin is enabled for remote themes
 
 # Markdown settings
 markdown: kramdown
 kramdown:
   input: GFM
-
